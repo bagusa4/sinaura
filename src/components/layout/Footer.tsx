@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const footerLinks = [
   {
     title: "Tentang SinauRa?",
@@ -15,14 +17,16 @@ export default function Footer() {
       <div className="site-container">
         <div className="footer-main">
           <div>
-            <a className="footer-brand" href="#top">SinauRa?</a>
+            <Link className="footer-brand" href="/#top">SinauRa?</Link>
             <p>Ilmu dibagi. Dampak berlipat.</p>
           </div>
           {footerLinks.map((group) => (
             <div className="footer-link-group" key={group.title}>
-              <a href="#kontribusi">{group.title}</a>
+              <Link href={group.title === "Tentang SinauRa?" ? "/about" : "/#kontribusi"}>
+                {group.title}
+              </Link>
               {group.links.map((link) => (
-                <a href="#kontribusi" key={link}>{link}</a>
+                <Link href="/#kontribusi" key={link}>{link}</Link>
               ))}
             </div>
           ))}

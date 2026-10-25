@@ -941,6 +941,308 @@ a {
   padding-top: 15px;
 }
 
+.about-hero {
+  border-bottom: 1px solid var(--line);
+  padding: 72px 0 68px;
+}
+
+.about-hero-grid {
+  align-items: center;
+  display: grid;
+  gap: 9%;
+  grid-template-columns: 1fr 0.82fr;
+}
+
+.about-hero-copy h1 {
+  font-size: clamp(52px, 7vw, 88px);
+  font-weight: 620;
+  letter-spacing: -0.07em;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.about-hero-copy h1 span {
+  color: #789d20;
+}
+
+.about-hero-copy > p {
+  color: #45464d;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 24px 0 22px;
+  max-width: 510px;
+}
+
+.about-hero-art {
+  background: var(--dark);
+  border-radius: 17px;
+  color: #f8f8f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 390px;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+}
+
+.about-art-orbit {
+  color: var(--lime);
+  font-size: 88px;
+  line-height: 1;
+  position: absolute;
+  right: 24px;
+  top: 20px;
+}
+
+.about-art-label,
+.about-art-bottom {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.about-hero-art > p {
+  font-size: clamp(47px, 6vw, 72px);
+  font-weight: 570;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+  margin: 42px 0;
+  position: relative;
+}
+
+.about-hero-art > p span {
+  color: var(--lime);
+}
+
+.about-art-bottom {
+  align-items: center;
+  border-top: 1px solid #34353d;
+  color: #c0c1c6;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
+}
+
+.about-art-bottom span:last-child {
+  color: var(--lime);
+  font-size: 16px;
+}
+
+.about-intro {
+  border-bottom: 1px solid var(--line);
+  padding: 68px 0;
+}
+
+.about-intro-grid {
+  display: grid;
+  gap: 10%;
+  grid-template-columns: 1fr 0.82fr;
+}
+
+.about-intro h2,
+.about-principles-heading h2,
+.about-journey h2,
+.about-cta h2 {
+  font-size: clamp(31px, 4vw, 44px);
+  font-weight: 590;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.about-intro-copy {
+  padding-top: 39px;
+}
+
+.about-intro-copy p {
+  color: #505159;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 16px;
+}
+
+.about-text-link {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 13px;
+  margin-top: 4px;
+  padding: 8px 0;
+}
+
+.about-text-link:hover {
+  border-color: #9edc31;
+}
+
+.about-principles {
+  padding: 66px 0 72px;
+}
+
+.about-principles-heading {
+  align-items: flex-end;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.about-principles-heading h2 {
+  max-width: 560px;
+}
+
+.about-principles-heading > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 3px;
+  max-width: 300px;
+}
+
+.about-principles-grid {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 22px;
+}
+
+.about-principle h3 {
+  font-size: 19px;
+  font-weight: 590;
+  letter-spacing: -0.035em;
+  margin: 14px 0 8px;
+}
+
+.about-principle p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 350px;
+}
+
+.about-journey {
+  background: var(--dark);
+  color: #f8f8f5;
+  padding: 66px 0;
+}
+
+.about-journey .section-label {
+  color: #b8bac3;
+}
+
+.about-journey .section-label > span:nth-child(2) {
+  color: #f8f8f5;
+}
+
+.about-journey h2 {
+  max-width: 480px;
+}
+
+.about-journey > .site-container > div:first-child > p {
+  color: #c0c1c6;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 17px 0 0;
+  max-width: 390px;
+}
+
+.about-journey-grid {
+  align-items: center;
+  display: grid;
+  gap: 9%;
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.about-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-steps li {
+  align-items: flex-start;
+  border-bottom: 1px solid #34353d;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 30px 1fr auto;
+  padding: 18px 0;
+}
+
+.about-steps li:first-child {
+  border-top: 1px solid #34353d;
+}
+
+.about-step-number {
+  color: var(--lime);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+.about-steps h3 {
+  font-size: 15px;
+  font-weight: 580;
+  margin: 0;
+}
+
+.about-steps p {
+  color: #b8bac3;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 6px 0 0;
+}
+
+.about-step-arrow {
+  color: var(--lime);
+  font-size: 16px;
+}
+
+.about-cta {
+  background: var(--lime);
+  color: var(--dark);
+  padding: 49px 0;
+}
+
+.about-cta .section-label,
+.about-cta .section-label > span:nth-child(2) {
+  color: #424a32;
+}
+
+.about-cta .label-dot {
+  background: var(--dark);
+}
+
+.about-cta h2 {
+  font-size: clamp(36px, 5vw, 56px);
+}
+
+.about-cta-inner {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.about-cta-inner > div > p {
+  color: #424a32;
+  font-size: 14px;
+  margin: 12px 0 0;
+}
+
+.about-cta .button-primary {
+  background: var(--dark);
+  color: #f8f8f5;
+  flex-shrink: 0;
+}
+
+.about-cta .button-primary:hover {
+  background: #30313a;
+}
+
 @media (max-width: 760px) {
   .site-container {
     padding-left: 22px;
@@ -994,6 +1296,43 @@ a {
 
   .hero-section {
     padding: 50px 0;
+  }
+
+  .about-hero {
+    padding: 50px 0;
+  }
+
+  .about-hero-grid,
+  .about-intro-grid,
+  .about-journey-grid {
+    gap: 36px;
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-art {
+    min-height: 340px;
+  }
+
+  .about-intro,
+  .about-principles,
+  .about-journey {
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
+
+  .about-intro-copy {
+    padding-top: 0;
+  }
+
+  .about-principles-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-principles-grid {
+    gap: 25px;
+    grid-template-columns: 1fr;
   }
 
   .hero-grid {
@@ -1110,6 +1449,24 @@ a {
 
   .hero-copy h1 {
     font-size: 46px;
+  }
+
+  .about-hero-copy h1 {
+    font-size: 55px;
+  }
+
+  .about-hero-art {
+    min-height: 310px;
+    padding: 24px;
+  }
+
+  .about-hero-art > p {
+    font-size: 52px;
+  }
+
+  .about-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .hero-actions {
