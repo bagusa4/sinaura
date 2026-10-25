@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sinaura — Belajar terbuka, tumbuh bersama",
+  title: "SinauRa — Belajar terbuka, tumbuh bersama",
   description:
-    "Temukan jalur belajar gratis, praktikkan ilmu, dan bagikan pengetahuan bersama komunitas Sinaura.",
+    "Temukan jalur belajar gratis, praktikkan ilmu, dan bagikan pengetahuan bersama komunitas SinauRa.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

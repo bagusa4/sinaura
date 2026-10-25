@@ -1,12 +1,15 @@
 import SectionLabel from "@/features/home/components/SectionLabel";
 
-const activity = [
-  1, 0, 2, 3, 1, 0, 2, 3, 2, 1, 0, 3, 1, 2, 0, 1, 3, 2, 1, 0, 2, 3, 1, 2,
-  0, 1, 3, 2, 1, 0, 2, 1, 3, 2, 0, 1, 2, 3, 1, 0, 2, 1, 3, 2, 0, 1, 2, 3,
-  1, 2, 0, 1, 3, 2, 1, 0, 3, 2, 1, 2, 0, 1, 3, 2, 1, 0, 2, 3, 1, 2, 0, 1,
-  3, 2, 1, 0, 2, 1, 3, 2, 1, 0, 2, 3, 1, 2, 0, 1, 3, 2, 1, 0, 2, 3, 1, 2,
-  0, 1, 3, 2, 1, 0, 2, 1, 3, 2, 1, 0, 2, 3, 1, 2, 0, 1, 3, 2, 1, 0, 2, 3,
-];
+const activity = Array.from({ length: 53 * 7 }, (_, index) => {
+  const week = Math.floor(index / 7);
+  const day = index % 7;
+
+  if ((week * 5 + 3) % 13 < 4) return 0;
+
+  const score = (week * 5 + day * 3 + Math.floor(week / 2)) % 11;
+  if (score < 6) return 0;
+  return score < 9 ? 1 : score === 9 ? 2 : 3;
+});
 
 export default function LearningStreak() {
   return (
@@ -28,15 +31,43 @@ export default function LearningStreak() {
             <strong>128 aktivitas tahun ini</strong>
             <span>2026</span>
           </div>
-          <div className="activity-months" aria-hidden="true">
-            {"Jan Feb Mar Apr Mei Jun Jul Agu Sep Okt Nov Des".split(" ").map((month) => (
-              <span key={month}>{month}</span>
+          <div aria-hidden="true" className="activity-months">
+            {"Jan Feb Mar Apr Mei Jun Jul Agu Sep Okt Nov Des"
+              .split(" ")
+              .map((month) => (
+                <span key={month}>{month}</span>
+              ))}
+          </div>
+          <div
+            aria-label="Visualisasi aktivitas belajar selama 53 minggu pada tahun 2026"
+            className="activity-grid"
+            role="img"
+          >
+            {activity.map((level, index) => (
+              <span
+                aria-hidden="true"
+                className={`activity-cell activity-${level}`}
+                key={index}
+              />
             ))}
           </div>
-          <div aria-label="Visualisasi aktivitas belajar" className="activity-grid">
-            {activity.map((level, index) => (
-              <span className={`activity-cell activity-${level}`} key={index} />
-            ))}
+          <div className="activity-footer">
+            <span>Januari – Desember 2026</span>
+            <div
+              aria-label="Intensitas aktivitas: 0 hingga 3+ per hari"
+              className="activity-legend"
+              role="img"
+            >
+              <span>0</span>
+              {[0, 1, 2, 3].map((level) => (
+                <span
+                  aria-hidden="true"
+                  className={`activity-cell activity-${level}`}
+                  key={level}
+                />
+              ))}
+              <span>3+ / hari</span>
+            </div>
           </div>
           <div className="activity-summary">
             <span><strong>18</strong>pelajaran selesai</span>

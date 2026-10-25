@@ -7,7 +7,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section aria-label="Sinaura dalam angka" className="stats-section">
+    <section aria-label="SinauRa dalam angka" className="stats-section">
       <div className="site-container stats-grid">
         {stats.map((stat) => (
           <div className="stat-item" key={stat.label}>

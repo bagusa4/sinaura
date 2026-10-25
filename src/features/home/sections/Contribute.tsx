@@ -27,7 +27,7 @@ export default function Contribute() {
           <h2>Kamu belajar. Kami ikut tumbuh.</h2>
           <p>
             Punya catatan, materi, latihan, atau diskusi? Jadikan pintu masuk
-            bagi orang lain. Di Sinaura, siapa pun bisa menjadi kontributor.
+            bagi orang lain. Di SinauRa, siapa pun bisa menjadi kontributor.
           </p>
           <a className="button button-primary" href="mailto:halo@sinaura.id">
             Mulai berkontribusi <span aria-hidden="true">↗</span>

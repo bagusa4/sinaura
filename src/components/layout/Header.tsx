@@ -14,8 +14,8 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="site-container header-inner">
-        <a className="brand" href="#top" aria-label="Sinaura, beranda">
-          Sinaura<span className="brand-dot">?</span>
+        <a className="brand" href="#top" aria-label="SinauRa, beranda">
+          SinauRa<span className="brand-dot">?</span>
           <span className="brand-sparkle" aria-hidden="true">✦</span>
         </a>
 
